@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kedai Wolaks - Coffee Sunsetz</title>
+
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background: #f0f6ff;
         }
+
+        /* HEADER */
         header {
             position: fixed;
             top: 0;
@@ -22,6 +25,7 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             z-index: 100;
         }
+
         nav a {
             margin: 0 15px;
             text-decoration: none;
@@ -33,7 +37,7 @@
             color: #007bff;
         }
 
-        /* HERO SECTION */
+        /* HERO */
         .hero {
             height: 100vh;
             background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80');
@@ -46,51 +50,61 @@
             color: white;
             animation: fadeIn 2s ease-in-out;
         }
+
         .hero h1 {
             font-size: 50px;
             text-shadow: 2px 2px 5px black;
         }
+
         @keyframes fadeIn {
             from { opacity: 0; }
-            to { opacity: 1; }
+            to   { opacity: 1; }
         }
 
-        /* MENU SECTION */
+        /* SECTION */
         section {
             padding: 80px 20px;
             max-width: 1100px;
             margin: auto;
         }
+
         h2 {
             text-align: center;
             margin-bottom: 30px;
         }
 
+        /* MENU TABLE STYLE */
         .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            display: flex;
+            flex-direction: column;
             gap: 20px;
         }
+
         .menu-item {
+            display: flex;
+            align-items: center;
             background: white;
             padding: 15px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            text-align: center;
             transition: transform 0.3s;
         }
+
         .menu-item:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
+
         .menu-item img {
-            width: 100%;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             object-fit: cover;
             border-radius: 10px;
+            margin-right: 20px;
         }
+
         .menu-item h3 {
-            margin-top: 10px;
-            font-size: 18px;
+            font-size: 20px;
+            margin: 0;
         }
 
         /* BEST SELLER */
@@ -101,17 +115,137 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             margin-top: 40px;
         }
-        .bestseller h3 {
-            text-align: center;
-        }
+
         .best-list {
             margin-top: 15px;
             line-height: 1.8;
             font-size: 18px;
         }
 
+        /* FOOTER */
         footer {
             margin-top: 40px;
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo"><strong>KEDAI WOLAKS</strong></div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#bestseller">Best Seller</a>
+    </nav>
+</header>
+
+<!-- MUSIC -->
+<iframe 
+    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" 
+    frameborder="0" 
+    height="175" 
+    style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;margin-top:70px;" 
+    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" 
+    src="https://embed.music.apple.com/id/song/welcome-to-my-paradise/1080526140?l=id">
+</iframe>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div>
+        <h1>Kedai Wolaks</h1>
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" style="width:70%;border-radius:12px;margin-top:15px;">
+        <img src="https://images.unsplash.com/photo-1501959915551-4e8b57f2825a?auto=format&fit=crop&w=800&q=80" style="width:70%;border-radius:12px;margin-top:15px;">
+        <p>Nikmati secangkir kopi di Wadumbolo ditemani senja</p>
+    </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+    <h2>Menu Minuman</h2>
+
+    <div class="menu-grid">
+
+        <div class="menu-item">
+            <img src="https://media.istockphoto.com/id/846505094/id/foto/mocktail-tropis-gelas-plastik-blue-hawaii-italian-soda-dengan-lemon.jpg?s=612x612&w=0&k=20&c=EznJrHrAHl3aFdiVQH0bweXRyo249HxLesJYMGycOLk=">
+            <h3>Yolo Cocktails</h3>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8P4Y44ZhMWqqFv87dQVXlugv8bLOZr0kSTxwOk1iOUbR1rrzcf9rxWjw&s=10">
+            <h3>Nutrisari</h3>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXi_4-1DJQM2IGVZF4D_HKZREn6OrDL0N1KfinB6AS1Q&s=10">
+            <h3>Aneka Coffee Dingin / Hangat</h3>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://img.lazcdn.com/g/p/ef61e9293d30654eadbad9bdfc876d6b.jpg_720x720q80.jpg">
+            <h3>Minuman Susu Dingin/Hangat</h3>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://tenggilisbakery.com//images/WATERMARK/202007/10061/minuman-coklat-21053206812.jpg">
+            <h3>Minuman Coklat Dingin/Hangat</h3>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://strategimanajemen.net/wp-content/uploads/2025/07/Gambar-WhatsApp-2023-10-26-pukul-135557_b674566e-2444954010.webp">
+            <h3>Air Putih</h3>
+        </div>
+
+        <div class="menu-item">
+            <img src="https://img.lazcdn.com/g/p/7b614dfb5b76bc0c2d6df2c1174065fb.jpg_720x720q80.jpg">
+            <h3>Pop Mie</h3>
+        </div>
+
+    </div>
+</section>
+
+<!-- BEST SELLER -->
+<section id="bestseller">
+    <h2>Best Seller</h2>
+
+    <div class="bestseller">
+        <h3>Menu Terlaris</h3>
+
+        <div class="best-list">
+            <p>🔥 Yolo Cocktails — <strong>Rp 15.000</strong></p>
+            <p>🔥 Air Putih — <strong>Rp 5.000</strong></p>
+            <p>🔥 Goodday Ice — <strong>Rp 5.000</strong></p>
+        </div>
+    </div>
+</section>
+
+<!-- KONTAK -->
+<section id="contact">
+    <h2>Kontak & Alamat</h2>
+
+    <div class="contact" style="background:white;padding:20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+        <p><strong>Alamat:</strong> Depan cv unggul, Jalan
+        Lintas Gudang Garam, Kota Bima
+ https://maps.app.goo.gl/5oKn1NNNi6PPXzoWA</p>
+        <p><strong>WhatsApp:</strong>085338595633</p>
+        <p><strong>Email:</strong> kedaiwolaks@mail.com</p>
+    </div>
+</section>
+
+<section style="text-align:center;padding:20px;margin-top:20px;font-style:italic;color:#444;">
+    "Senja tak pernah terburu-buru. Ia datang perlahan, memberi warna pada langit, dan meninggalkan rindu di setiap gelas kopi yang kau nikmati."
+</section>
+
+<footer>
+    © 2025 Kedai Wolaks - WarungObroLAnKaumScootrist
+</footer>
+
+</body>
+</html>
             text-align: center;
             padding: 20px;
             background: #222;
